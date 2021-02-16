@@ -51,5 +51,4 @@ router.post('/maestros/:id/delete', (req, res, next) => { //duda si lleva maestr
 });
 
 
-
 module.exports = router;
