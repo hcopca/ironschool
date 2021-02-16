@@ -18,7 +18,7 @@ router.get('/maestros-lista', (req, res, next) => {
 //ELLOS SE REGISTRAN
 
 //Editar maestro
-router.get('/maestros/:id/edit', (req, res, next) => { //duda si lleva maestros antes del edit
+router.get('/maestros/:id/edit', (req, res, next) => {
 
     const editarMaestro = req.params.id
     crudMtro.findById(editarMaestro)

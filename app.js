@@ -64,6 +64,6 @@ const alumno = require('./routes/alumno.routes');
 app.use('/', alumno)
 const crudMtro = require('./routes/crud-mtro');
 app.use('/', crudMtro)
-const crearLeccion = require("../models/leccion")
+const crearLeccion = require("./routes/lesson.routes")
 app.use('/', crearLeccion)
 module.exports = app;

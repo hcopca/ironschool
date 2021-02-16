@@ -1,0 +1,29 @@
+<h2>Actualizar lección</h2>
+
+<h3>Editar lección: {{actLesson.nameLesson}}</h3>
+<form action="/lecciones/{{actLesson._id}}/lesson-update" method="POST">
+  <label>
+    Nombre de la lección:
+    <input type="text" name="nameLesson" value="{{actLesson.nameLesson}}" />
+  </label>
+  <label>
+    Aprendizaje Esperado:
+    <input type="text" name="aprendizajeE" value="{{actLesson.aprendizajeE}}" />
+  </label>
+  <label>
+   Contenido:
+    <input type="text" name="contenido" value="{{actLesson.contenido}}" />
+  </label>
+
+  <label>
+   Grado:
+    <input type="text" name="gradoLeccion" value="{{actLesson.gradoLeccion}}" />
+  </label>
+
+   <label>
+   Material didáctico:
+    <input type="text" name="materialDidactico" value="{{editarMaestro.telefono}}" />
+  </label>
+
+  <button type="submit">Guardar nueva lección</button>
+</form>

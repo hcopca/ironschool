@@ -1,0 +1,32 @@
+<h1>Lecciones</h1>
+
+<div id="signup">
+  <h2>Lecciones</h2>
+  <form action="/lesson-create" method="POST">
+
+    <label for="input-nameLesson"> Leccion </label>
+    <input type="text" id="text" name="nameLesson" placeholder="Ingresa el nombre de la lección" />
+
+
+    <label for="input-AprendizajeE"> Aprendizaje Esperado </label>
+    <input type="text" name="aprendizajeE" id="input-password" placeholder="Aprendizaje Esperado" />
+
+    <label for="input-contenido"> Contenido </label>
+    <input type="text" name="contenido" placeholder="Contenido" />
+
+       <label for="input-gradoLeccion"> Grado </label>
+    <input type="text" name="gradoLeccion" placeholder="Grado de la lección"/>
+
+       <label for="input-materialDida"> Material didáctico requerido </label>
+    <input type="text" name="materialDidactico" placeholder="Material didáctico" />
+
+
+    <button type="submit">Agregar Leccion</button>
+
+  </form>
+
+   {{!-- error message will be added here --}}
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
+</div>
