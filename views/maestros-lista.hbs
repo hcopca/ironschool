@@ -1,0 +1,15 @@
+{{!-- PROVENIENTE DE CRUD MTRO --}}
+
+<h2>Lista de maestros</h2>
+
+{{#each this.mtros}}
+<h3>{{nombre}}</h3>
+<p>email: {{this.email}}</p>
+<p>Apellido Paterno: {{apellidoPat}}</p>
+<p>Apellido Materno: {{apellidoMat}}</p>
+<p>No de control: {{noControl}}</p>
+<p>No de telefono: {{telefono}}</p>
+<p>Turno: {{turno}}</p>
+<p>Curp: {{curp}}</p>
+<hr>
+{{/each}}

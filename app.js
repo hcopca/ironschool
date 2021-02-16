@@ -62,4 +62,6 @@ const uno = require('./routes/uno.routes');
 app.use('/', uno)
 const alumno = require('./routes/alumno.routes');
 app.use('/', alumno)
+const crudMtro = require('./routes/crud-mtro');
+app.use('/', crudMtro)
 module.exports = app;

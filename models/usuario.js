@@ -26,7 +26,7 @@ const usuarioSchema = new Schema({
         trim: true
     },
 
-    apellidoMAt: {
+    apellidoMat: {
         type: String,
         trim: true
     },

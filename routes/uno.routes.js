@@ -91,7 +91,11 @@ router.post('/login', (req, res, next) => {
             } else if (bcrypt.compareSync(password, user.passwordHash)) {
                 req.session.currentUser = user;
                 console.log(req.session)
-                res.redirect('/user-profile-mtro');
+                if (user.rol === 'Maestro') {
+                    res.redirect('/user-profile-mtro')
+                } else if (user.rol === 'Alumno') {
+                    res.redirect('/user-profile-alumno')
+                }
             } else {
                 res.render('login', { errorMessage: 'Contraseña incorrecta' });
             }
@@ -105,9 +109,3 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router
-
-
-
-// If (user.rol=== maestro) {
-//   res.redirect 
-// }

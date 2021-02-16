@@ -1,0 +1,39 @@
+<h2>Actualizar maestro</h2>
+
+<h3>Editar maestro: {{editarMaestro.name}}</h3>
+<form action="/maestros/{{editarMaestro._id}}/edit" method="POST">
+  <label>
+    Nombre:
+    <input type="text" name="nombre" value="{{editarMaestro.nombre}}" />
+  </label>
+  <label>
+    Apellido Paterno
+    <input type="text" name="apellidoPat" value="{{editarMaestro.apellidoPat}}" />
+  </label>
+  <label>
+   Apellido Materno
+    <input type="text" name="apellidoMat" value="{{editarMaestro.apellidoMat}}" />
+  </label>
+
+  <label>
+   Número de control
+    <input type="text" name="noControl" value="{{editarMaestro.noControl}}" />
+  </label>
+
+   <label>
+   Teléfono
+    <input type="number" name="telefono" value="{{editarMaestro.telefono}}" />
+  </label>
+
+   <label>
+   Turno
+    <input type="text" name="turno" value="{{editarMaestro.turno}}" />
+  </label>
+
+   <label>
+   Curp
+    <input type="text" name="curp" value="{{editarMaestro.curp}}" />
+  </label>
+
+  <button type="submit">Guardar nuevo maestro</button>
+</form>
