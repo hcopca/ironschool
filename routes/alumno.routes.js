@@ -9,8 +9,8 @@ const Usuario = require('../models/usuario')
 const saltRounds = 10
 
 
-router.get('/sign-up-mtro', (req, res, next) => {
-    res.render('sign-up-mtro')
+router.get('/sign-up-alumno', (req, res, next) => {
+    res.render('sign-up-alumno')
 })
 
 router.post('/sign-up-mtro', async(req, res, next) => {

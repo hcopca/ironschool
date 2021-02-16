@@ -1,0 +1,43 @@
+<div id="signup">
+  <h2>Registrarse</h2>
+  <form action="/sign-up-mtro" method="POST">
+
+    <label for="input-email"> Email </label>
+    <input type="email" id="input-email" name="email" placeholder="Ingresa tu email" />
+
+
+    <label for="input-password"> Contraseña </label>
+    <input type="password" name="password" id="input-password" placeholder="********" />
+
+    <label for="input-nombre"> Nombre </label>
+    <input type="text" name="nombre" placeholder="Nombre" />
+
+       <label for="input-apellidoPat"> Apellido Paterno </label>
+    <input type="text" name="apellidoPat" placeholder="Apellido Paterno"/>
+
+       <label for="input-apellidoMat"> Apellido Materno </label>
+    <input type="text" name="apellidoMat" placeholder="Apellido Materno" />
+
+    <label for="input-noControl"> Número de control </label>
+    <input type="text" name="noControl" placeholder="Ingresa tu número de control." />
+
+    <label for="input-telefono"> Télefono </label>
+    <input type="text" name="telefono" placeholder="Ingresa tu número de télefono." />
+
+    <label for="input-turno"> Turno </label>
+    <input type="text" name="turno" placeholder="Ingresa tu turno" />
+
+    <label for="input-curp"> Curp </label>
+    <input type="text" name="curp" placeholder="Ingresa tu curp." />
+
+    <button type="submit">Crear cuenta</button>
+
+  </form>
+
+   {{!-- error message will be added here --}}
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
+</div>
+
+
