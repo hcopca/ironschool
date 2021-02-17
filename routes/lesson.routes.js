@@ -6,11 +6,16 @@ const Leccion = require('../models/leccion.js')
 
 router.get('/lecciones', (req, res, next) => {
 
+    const user = req.session.currentUser
 
+    if (user.rol === 'Maestro') {
+        user.esma = true
+    }
+    console.log(user.esma)
     Leccion.find()
         .then(less => {
             console.log(less)
-            res.render("lecciones/todas-lesson", { less })
+            res.render("lecciones/todas-lesson", { less, user })
         }).catch(error => { next(error) })
 
 });
