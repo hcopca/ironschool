@@ -20,8 +20,22 @@ router.get('/lecciones', (req, res, next) => {
 
 });
 
-//Crear
 
+//INFORMACION DE CONTACTO (RUTA)
+router.get('/contacto', (req, res, next) => {
+
+    res.render('contacto')
+});
+
+//INFORMACION DE ACERCA DE NOSOTROS (RUTA)
+router.get('/acerca', (req, res, next) => {
+
+    res.render('about')
+});
+
+
+
+//CREAR
 
 router.get('/lecciones/create', (req, res, next) => {
 
