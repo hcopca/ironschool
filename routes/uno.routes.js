@@ -97,7 +97,7 @@ router.post('/login', (req, res, next) => {
                     res.redirect('/user-profile-alumno')
                 }
             } else {
-                res.render('login', { errorMessage: 'Contraseña incorrecta' });
+                res.render('login', { errorMessage: 'Correo o contraseña incorrectos' });
             }
         })
         .catch(error => next(error));

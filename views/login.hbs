@@ -1,6 +1,44 @@
-Holaa
+<body class="text-center">
+    
+<main class="form-signin">
+  <form action="/login" method="POST">
+    <img class="mb-4" src="images/LOGIN.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Iniciar</h1>
+    <label for="inputEmail" class="visually-hidden">Email address</label>
+    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="correo@texto.com" required="" autofocus="">
+    <label for="inputPassword" class="visually-hidden">Password</label>
+    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="contraseña" required="">
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Recordar usuario
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+<h5>¿No tienes cuenta? Registrate aquí</h5>
+<form id="logout-form" action="/sign-up-mtro" method="POST">
+    <button type="submit" class="btn btn-primary">Registro de Mtro</button>
+  </form>
+
+    <form id="logout-form" action="/sign-up-mtro" method="POST">
+    <button>Registro</button>
+  </form>
+  </form>
+    <p class="mt-5 mb-3 text-muted">© 2020–2021</p>
+  </form>
+</main>
 
 
+    
+  
+
+</body>
+
+
+{{!-- DEFAULT
 <div id="form">
   <h2>Iniciar Sesión</h2>
   <form action="/login" method="POST">
@@ -16,4 +54,4 @@ Holaa
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-</div>
+</div> --}}
