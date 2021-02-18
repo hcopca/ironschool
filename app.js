@@ -16,17 +16,17 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 const app = express();
 
 //require database
-// require('./configs/db.config');
+require('./configs/db.configs');
 require('./configs/session.configs')(app);
 
-mongoose
-    .connect('mongodb://localhost/iron-school', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(x => {
-        console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-    })
-    .catch(err => {
-        console.error('Error connecting to mongo', err)
-    });
+// mongoose
+//     .connect('mongodb://localhost/iron-school', { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(x => {
+//         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+//     })
+//     .catch(err => {
+//         console.error('Error connecting to mongo', err)
+//     });
 
 
 // Middleware Setup
