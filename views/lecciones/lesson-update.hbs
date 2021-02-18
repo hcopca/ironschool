@@ -1,29 +1,48 @@
-<h2>Actualizar lección</h2>
 
+<h2>Lecciones</h2>
+<form action="/" method="GET">
+<button class="btn btn-danger">Inicio</button>
+</form>
 <h3>Editar lección: {{actLesson.nameLesson}}</h3>
+<div id="signup">
+  <h5>Llena los campos para actualizar actividad</h5> 
+
+
 <form action="/lecciones/{{actLesson._id}}/lesson-update" method="POST">
-  <label>
-    Nombre de la lección:
-    <input type="text" name="nameLesson" value="{{actLesson.nameLesson}}" />
-  </label>
-  <label>
-    Aprendizaje Esperado:
-    <input type="text" name="aprendizajeE" value="{{actLesson.aprendizajeE}}" />
-  </label>
-  <label>
-   Contenido:
-    <input type="text" name="contenido" value="{{actLesson.contenido}}" />
-  </label>
 
-  <label>
-   Grado:
-    <input type="text" name="gradoLeccion" value="{{actLesson.gradoLeccion}}" />
-  </label>
 
-   <label>
-   Material didáctico:
-    <input type="text" name="materialDidactico" value="{{editarMaestro.telefono}}" />
-  </label>
+  <span class="input-group-text" id="inputGroup-sizing-default">Nombre de la lección </span>
+  <input type="text" name="nameLesson" value="{{actLesson.nameLesson}}" placeholder="Ingresa el nombre de la lección" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-  <button type="submit">Guardar nueva lección</button>
+<span class="input-group-text" id="inputGroup-sizing-default">Aprendizaje Esperado</span>
+  <input type="text" name="aprendizajeE" value="{{actLesson.aprendizajeE}}" placeholder="Aprendizaje Esperado" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<span class="input-group-text" id="inputGroup-sizing-default">Contenido</span>
+  <input type="text" name="contenido" value="{{actLesson.contenido}}"  placeholder="Contenido" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<span class="input-group-text" id="inputGroup-sizing-default">Grado</span>
+  <input type="text" name="gradoLeccion" value="{{actLesson.gradoLeccion}}" placeholder="Ingresa el grado" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<span class="input-group-text" id="inputGroup-sizing-default">Actividad</span>
+  <input type="text" name="materialDidactico" value="{{actLesson.materialDidactico}}" placeholder="Ingresa Actividad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<hr>
+
+    <button type="submit" class="btn btn-primary">Guardar actividad</button>
+<hr>
+</form>
+
+ {{!-- error message will be added here --}}
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
+</div>
+
+<form action="/" method="GET">
+<button class="btn btn-danger">Inicio</button>
 </form>

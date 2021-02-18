@@ -17,18 +17,19 @@
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
-
+</form>
 <h5>¿No tienes cuenta? Registrate aquí</h5>
-<form id="logout-form" action="/sign-up-mtro" method="POST">
-    <button type="submit" class="btn btn-primary">Registro de Mtro</button>
+<form id="logout-form" action="/sign-up-mtro" method="GET">
+    <button type="submit" class="btn btn-primary">Registro de Maestro</button>
   </form>
-
-    <form id="logout-form" action="/sign-up-mtro" method="POST">
-    <button>Registro</button>
+<hr>
+<form id="logout-form" action="/sign-up-alumno" method="GET">
+    <button type="submit" class="btn btn-primary">Registro de Alumno</button>
   </form>
+    
   </form>
     <p class="mt-5 mb-3 text-muted">© IronSchool-2021 CEO: Hugo Copca</p>
-  </form>
+  
 </main>
 
 
