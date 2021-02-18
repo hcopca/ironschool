@@ -1,31 +1,43 @@
-<h1>Lecciones</h1>
+
+
+<h2>Lecciones</h2>
 
 <div id="signup">
-  <h2>Lecciones</h2>
+  <h5>Llena los campos para subir actividad</h5>    <form action="/" method="GET">
+<button class="btn btn-danger">Inicio</button>
+</form>
+<hr>
   <form action="/lesson-create" method="POST">
-
-    <label for="input-nameLesson"> Leccion </label>
-    <input type="text" id="text" name="nameLesson" placeholder="Ingresa el nombre de la lección" />
+<div class="input-group mb-3">
 
 
-    <label for="input-AprendizajeE"> Aprendizaje Esperado </label>
-    <input type="text" name="aprendizajeE" id="input-password" placeholder="Aprendizaje Esperado" />
+  <span class="input-group-text" id="inputGroup-sizing-default">Leccion</span>
+  <input type="text" id="input-email" name="nameLesson" placeholder="Ingresa el nombre de la lección" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-    <label for="input-contenido"> Contenido </label>
-    <input type="text" name="contenido" placeholder="Contenido" />
+<span class="input-group-text" id="inputGroup-sizing-default">Aprendizaje Esperado</span>
+  <input type=text id="input-password" name="aprendizajeE" placeholder="Aprendizaje Esperado" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
 
-       <label for="input-gradoLeccion"> Grado </label>
-    <input type="text" name="gradoLeccion" placeholder="Grado de la lección"/>
+<span class="input-group-text" id="inputGroup-sizing-default">Contenido</span>
+  <input type="text" id="input-email" name="contenido" placeholder="Contenido" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
 
-       <label for="input-materialDida"> Material didáctico requerido </label>
-    <input type="text" name="materialDidactico" placeholder="Material didáctico" />
+<span class="input-group-text" id="inputGroup-sizing-default">Grado</span>
+  <input type="text" id="input-email" name="gradoLeccion" placeholder="Ingresa el grado" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
 
+<span class="input-group-text" id="inputGroup-sizing-default">Actividad</span>
+  <input type="text" id="input-email" name="materialDidactico" placeholder="Ingresa Actividad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
 
-    <button type="submit">Agregar Leccion</button>
+<hr>
 
-  </form>
+    <button type="submit" class="btn btn-primary">Agregar actividad</button>
+<hr>
+</form>
 
-   {{!-- error message will be added here --}}
+ {{!-- error message will be added here --}}
     {{#if errorMessage}}
     <p class="error">{{errorMessage}}</p>
   {{/if}}

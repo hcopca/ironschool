@@ -1,16 +1,44 @@
 {{!-- PROVENIENTE DE CRUD MTRO --}}
-
 <h2>Lista de maestros</h2>
 
+
+
+
 {{#each this.mtros}}
-<h3>{{nombre}}</h3>
-<p>email: {{this.email}}</p>
-<p>Apellido Paterno: {{apellidoPat}}</p>
-<p>Apellido Materno: {{apellidoMat}}</p>
-<p>No de control: {{noControl}}</p>
-<p>No de telefono: {{telefono}}</p>
-<p>Turno: {{turno}}</p>
-<p>Curp: {{curp}}</p>
+
+<ul class="list-group">
+  <h3>{{nombre}}</h3>   <form action="/user-profile-mtro" method="GET">
+<button class="btn btn-danger">Mi perfil</button>
+</form>
 <hr>
 
+  <li class="list-group-item list-group-item-primary">email: {{this.email}}</li>
+  <li class="list-group-item list-group-item-secondary">Apellido Paterno: {{apellidoPat}}</li>
+  <li class="list-group-item list-group-item-success">Apellido Materno: {{apellidoMat}}</li>
+  <li class="list-group-item list-group-item-danger">No de control: {{noControl}}</li>
+  <li class="list-group-item list-group-item-warning">Turno: {{turno}}</li>
+  <li class="list-group-item list-group-item-info">Curp: {{curp}}</li>
+  {{!-- <li class="list-group-item list-group-item-light">A simple light list group item</li>
+  <li class="list-group-item list-group-item-dark">A simple dark list group item</li> --}}
+{{!-- SE AGREGAN PARA FUTURAS INCORPORACIONES --}}
+</ul>
+<hr>
 {{/each}}
+{{!-- <hr> AQUI SE AGREGAN LOS BOTONES PARA EDITAR O ELIMINAR LOS MAESTROS
+<a href="/lecciones/{{id}}/lesson-update">Editar</a>
+<hr>
+<form action="/maestros/{{id}}/delete" method="POST"> 
+<button type="submit">Borrar</button>
+</form> --}}
+
+
+<form action="/lecciones" method="GET">
+<button class="btn btn-danger">Mostrar lecciones</button>
+</form>
+<hr>
+
+ <form action="/lecciones/create" method="GET">
+<button class="btn btn-danger">Crear lección</button>
+</form>
+<hr>
+

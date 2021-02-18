@@ -1,20 +1,27 @@
 
-<h1>PERFIL DE ALUMNO</h1>
-
-
+<h1>Perfil de alumno</h1>
 <ul class="list-group">
   <h3>{{userInSession.nombre}}</h3>
-  <li class="list-group-item">email: {{userInSession.email}}</li>
-  <li class="list-group-item">Apellido Paterno: {{userInSession.apellidoPat}}</li>
-  <li class="list-group-item">Apellido Materno: {{userInSession.apellidoMat}}</li>
-  <li class="list-group-item">No de control: {{userInSession.noControl}}</li>
-  <li class="list-group-item">Turno: {{userInSession.turno}}</li>
-  <li class="list-group-item">Curp: {{userInSession.curp}}</li>
+
+  <li class="list-group-item list-group-item-primary">email: {{userInSession.email}}</li>
+  <li class="list-group-item list-group-item-secondary">Apellido Paterno: {{userInSession.apellidoPat}}</li>
+  <li class="list-group-item list-group-item-success">Apellido Materno: {{userInSession.apellidoMat}}</li>
+  <li class="list-group-item list-group-item-danger">No de control: {{userInSession.noControl}}</li>
+  <li class="list-group-item list-group-item-warning">Turno: {{userInSession.turno}}</li>
+  <li class="list-group-item list-group-item-info">Curp: {{userInSession.curp}}</li>
+  {{!-- <li class="list-group-item list-group-item-light">A simple light list group item</li>
+  <li class="list-group-item list-group-item-dark">A simple dark list group item</li> --}}
+{{!-- SE AGREGAN PARA FUTURAS INCORPORACIONES --}}
 </ul>
-
-
-<button type="submit" class="btn btn-primary" href="/lecciones" action="/lecciones" method="POST">Lecciones</button>
-
- <form action="/lecciones" method="POST">
-    <button href="/lecciones">Lecciones</button>
-  </form>
+<hr>
+<form action="/lecciones" method="GET">
+<button class="btn btn-danger">Mostrar lecciones</button>
+</form>
+<hr>
+<form action="/lecciones/create" method="GET">
+<button class="btn btn-danger">Subir actividad</button>
+</form>
+<hr>
+<form action="/maestros-lista" method="GET">
+<button class="btn btn-danger">Mostrar maestros.</button>
+</form>

@@ -1,5 +1,50 @@
 
+{{!-- OTRA LISTA --}}
 <h2>Lista de lecciones</h2>
+{{#each this.less}}
+<h3>{{nombre}}</h3>
+<ul class="list-group">
+  <li class="list-group-item">{{userInSession.nombre}}</li>
+
+  <li class="list-group-item list-group-item-primary">Nombre de la lección: {{nameLesson}}</li>
+  <li class="list-group-item list-group-item-secondary">Aprendizaje Esperado: {{aprendizajeE}}</li>
+  <li class="list-group-item list-group-item-success">Contenido: {{contenido}}</li>
+  <li class="list-group-item list-group-item-danger">Grado: {{grado}}</li>
+  <li class="list-group-item list-group-item-warning">Material Didáctico: {{materialDidactico}}</li>
+  {{!-- <li class="list-group-item list-group-item-info">A simple info list group item</li>
+  <li class="list-group-item list-group-item-light">A simple light list group item</li>
+  <li class="list-group-item list-group-item-dark">A simple dark list group item</li> --}}
+{{!-- SE AGREGAN PARA FUTURAS INCORPORACIONES --}}
+</ul>
+
+{{#if ../this.user.esma}}
+<hr>
+<a href="/lecciones/{{id}}/lesson-update">Editar</a>
+<hr>
+<form action="/lecciones/{{id}}/delete" method="POST">
+<button type="submit">Borrar</button>
+</form>
+{{/if}}
+<hr>
+{{/each}}
+
+<form action="/" method="GET">
+<button class="btn btn-danger">Inicio</button>
+</form>
+<hr>
+<form action="/lecciones/create" method="GET">
+<button class="btn btn-danger">Registrar actividad</button>
+</form>
+
+
+
+
+
+
+
+
+
+{{!-- 
 
 {{#each this.less}}
 <h3>{{nombre}}</h3>
@@ -17,4 +62,4 @@
 </form>
 {{/if}}
 <hr>
-{{/each}}
+{{/each}} --}}
