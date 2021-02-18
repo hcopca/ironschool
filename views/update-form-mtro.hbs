@@ -2,38 +2,40 @@
 
 <h3>Editar maestro: {{editarMaestro.name}}</h3>
 <form action="/maestros/{{editarMaestro._id}}/edit" method="POST">
-  <label>
-    Nombre:
-    <input type="text" name="nombre" value="{{editarMaestro.nombre}}" />
-  </label>
-  <label>
-    Apellido Paterno
-    <input type="text" name="apellidoPat" value="{{editarMaestro.apellidoPat}}" />
-  </label>
-  <label>
-   Apellido Materno
-    <input type="text" name="apellidoMat" value="{{editarMaestro.apellidoMat}}" />
-  </label>
+<div>
+  <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+  <input type="text" id="input-email" value="{{editarMaestro.nombre}}" name="nombre" placeholder="Ingresa tu nombre" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-  <label>
-   Número de control
-    <input type="text" name="noControl" value="{{editarMaestro.noControl}}" />
-  </label>
+<span class="input-group-text" id="inputGroup-sizing-default">Apellido Paterno</span>
+  <input type="text" id="input-apellidoPat" value="{{editarMaestro.apellidoPat}}" name="apellidoPat" placeholder="Primer Apellido" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-   <label>
-   Teléfono
-    <input type="number" name="telefono" value="{{editarMaestro.telefono}}" />
-  </label>
+<span class="input-group-text" id="inputGroup-sizing-default">Apellido Materno</span>
+  <input type="text" id="input-apellidoMat" value="{{editarMaestro.apellidoMat}}" name="apellidoMat" placeholder="Segundo Apellido" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-   <label>
-   Turno
-    <input type="text" name="turno" value="{{editarMaestro.turno}}" />
-  </label>
+<span class="input-group-text" id="inputGroup-sizing-default">Número de Control</span>
+  <input type="number" id="input-noControl" value="{{editarMaestro.noControl}}" name="noControl" placeholder="Ingresa tu número de control" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-   <label>
-   Curp
-    <input type="text" name="curp" value="{{editarMaestro.curp}}" />
-  </label>
+<span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+  <input type="number" id="input-telefono" value="{{editarMaestro.telefono}}" name="telefono" placeholder="Ingresa tu teléfono" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
 
-  <button type="submit">Guardar nuevo maestro</button>
+<span class="input-group-text" id="inputGroup-sizing-default">Turno</span>
+  <input type="text" id="input-turno" value="{{editarMaestro.turno}}" name="turno" placeholder="Ingresa tu turno" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
+
+<span class="input-group-text" id="inputGroup-sizing-default">Curp</span>
+  <input type="text" id="input-curp" value="{{editarMaestro.curp}}" name="curp" placeholder="Ingresa tu curp" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div >
+
+
+
+
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+
+
 </form>
+  

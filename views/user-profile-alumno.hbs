@@ -1,13 +1,20 @@
-<h1>PERFIL DE USUARIO</h1>
+
+<h1>PERFIL DE ALUMNO</h1>
 
 
-<h3>{{userInSession.nombre}}</h3>
-<p>email: {{userInSession.email}}</p>
-<p>Apellido Paterno: {{userInSession.apellidoPat}}</p>
-<p>Apellido Materno: {{userInSession.apellidoMat}}</p>
-<p>No de control: {{userInSession.noControl}}</p>
-<p>No de telefono: {{userInSession.telefono}}</p>
-<p>Turno: {{userInSession.turno}}</p>
-<p>Curp: {{userInSession.curp}}</p>
-<hr>
-</form>
+<ul class="list-group">
+  <h3>{{userInSession.nombre}}</h3>
+  <li class="list-group-item">email: {{userInSession.email}}</li>
+  <li class="list-group-item">Apellido Paterno: {{userInSession.apellidoPat}}</li>
+  <li class="list-group-item">Apellido Materno: {{userInSession.apellidoMat}}</li>
+  <li class="list-group-item">No de control: {{userInSession.noControl}}</li>
+  <li class="list-group-item">Turno: {{userInSession.turno}}</li>
+  <li class="list-group-item">Curp: {{userInSession.curp}}</li>
+</ul>
+
+
+<button type="submit" class="btn btn-primary" href="/lecciones" action="/lecciones" method="POST">Lecciones</button>
+
+ <form action="/lecciones" method="POST">
+    <button href="/lecciones">Lecciones</button>
+  </form>
