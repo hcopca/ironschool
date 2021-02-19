@@ -1,7 +1,7 @@
-<h1>Perfil de Maestro.</h1>
+<h1 class="text-danger">Perfil de Maestro.</h1>
 <h6>Sí eres un alumno no podrás ver toda las funcionalidades.</h6>
 <ul class="list-group">
-  <h3>{{userInSession.nombre}}</h3>
+  <h3 class="p-3 mb-2 bg-success text-white" >{{userInSession.nombre}}</h3>
 
   <li class="list-group-item list-group-item-primary">email: {{userInSession.email}}</li>
   <li class="list-group-item list-group-item-secondary">Apellido Paterno: {{userInSession.apellidoPat}}</li>
@@ -21,7 +21,7 @@
 <hr>
 
  <form action="/lecciones/create" method="GET">
-<button class="btn btn-danger">Subir actividad</button>
+<button class="btn btn-primary">Subir actividad</button>
 </form>
 <hr>
  <form action="/maestros-lista" method="GET">
